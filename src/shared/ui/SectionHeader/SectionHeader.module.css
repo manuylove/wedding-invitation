@@ -29,7 +29,7 @@
   color: var(--section-text-secondary, var(--color-text-secondary));
   font-family: var(--font-sans);
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.12em;
   line-height: 1.35;
   text-transform: uppercase;
@@ -66,6 +66,7 @@
   color: var(--section-text-secondary, var(--color-text-secondary));
   font-family: var(--font-sans);
   font-size: clamp(17px, 2vw, 20px);
+  font-weight: 400;
   line-height: 1.65;
 }
 

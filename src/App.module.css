@@ -3,6 +3,53 @@
   gap: var(--space-8);
 }
 
+.typographyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.typeSpecimen {
+  min-width: 0;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: rgb(252 250 246 / 70%);
+}
+
+.typeLabel {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.typeSample {
+  margin: 0;
+  color: var(--section-text);
+  overflow-wrap: anywhere;
+}
+
+.serifSample {
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1;
+}
+
+.sansSample {
+  font-size: clamp(20px, 3vw, 30px);
+  line-height: 1.4;
+}
+
+.handwritingSample {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.monoSample {
+  font-size: clamp(16px, 2vw, 20px);
+}
+
 .demoActions {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +72,7 @@
   background: rgb(255 255 255 / 4%);
   font-family: var(--font-mono);
   font-size: 0.95rem;
+  font-weight: 400;
   line-height: 1.65;
 }
 
