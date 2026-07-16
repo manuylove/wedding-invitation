@@ -1,0 +1,1 @@
+export { getInvitationFromUrl } from './getInvitationFromUrl'
