@@ -1,0 +1,15 @@
+.text-serif {
+  font-family: var(--font-serif);
+}
+
+.text-sans {
+  font-family: var(--font-sans);
+}
+
+.text-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
