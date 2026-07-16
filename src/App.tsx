@@ -2,6 +2,33 @@ import { Container, PaperSection } from './shared/layout'
 import { Button, HandwrittenNote, SectionHeader } from './shared/ui'
 import styles from './App.module.css'
 
+const typeSamples = [
+  {
+    label: 'Cormorant Garamond · 500',
+    className: 'text-serif',
+    sampleClassName: styles.serifSample,
+    text: 'Егор & Полина',
+  },
+  {
+    label: 'Onest · 400',
+    className: 'text-sans',
+    sampleClassName: styles.sansSample,
+    text: 'Современное свадебное приглашение',
+  },
+  {
+    label: 'Caveat · 500',
+    className: 'text-handwriting',
+    sampleClassName: styles.handwritingSample,
+    text: 'наконец-то мы можем позвать тебя на нашу свадьбу',
+  },
+  {
+    label: 'JetBrains Mono · 400',
+    className: 'text-mono',
+    sampleClassName: styles.monoSample,
+    text: 'Status: In love ❤️',
+  },
+] as const
+
 function App() {
   return (
     <main>
@@ -9,14 +36,28 @@ function App() {
         <Container>
           <div className={styles.demoStack}>
             <SectionHeader
-              eyebrow="Shared foundation"
+              eyebrow="Typography foundation"
               headingLevel={1}
-              title="Reusable layout and UI"
-              subtitle="This temporary screen checks the approved primitives before real invitation sections are built."
-              note="Handwritten notes inherit the section tone."
+              title="Project fonts"
+              subtitle="This temporary screen verifies the approved local Fontsource families, weights, and Cyrillic rendering before real invitation sections are built."
+              note="Handwritten notes use Caveat."
             />
+
+            <div className={styles.typographyGrid}>
+              {typeSamples.map((sample) => (
+                <article className={styles.typeSpecimen} key={sample.label}>
+                  <p className={styles.typeLabel}>{sample.label}</p>
+                  <p
+                    className={`${styles.typeSample} ${sample.className} ${sample.sampleClassName}`}
+                  >
+                    {sample.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+
             <div>
-              <Button>Primary button</Button>
+              <Button>Onest button 500</Button>
             </div>
           </div>
         </Container>
@@ -45,7 +86,7 @@ function App() {
             notePosition="corner"
           />
           <HandwrittenNote className={styles.demoNote} rotation="positive">
-            The note color comes from the section context.
+            наконец-то мы можем позвать тебя
           </HandwrittenNote>
         </Container>
       </PaperSection>
@@ -55,12 +96,12 @@ function App() {
           <SectionHeader
             eyebrow="Terminal tone"
             title="Terminal context"
-            subtitle="The component layer can inherit terminal text colors without introducing business logic."
+            subtitle="The mono font is reserved for terminal-style footer content."
             size="small"
           />
           <div className={styles.terminalBlock}>
-            <p>status: layout primitives ready</p>
-            <p className={styles.terminalMuted}>next: real sections later</p>
+            <p>Status: In love ❤️</p>
+            <p className={styles.terminalMuted}>font: JetBrains Mono · 400</p>
           </div>
         </Container>
       </PaperSection>

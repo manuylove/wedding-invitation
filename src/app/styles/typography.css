@@ -1,15 +1,40 @@
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
 .text-serif {
   font-family: var(--font-serif);
+  font-weight: 500;
 }
 
 .text-sans {
   font-family: var(--font-sans);
+  font-weight: 400;
 }
 
 .text-handwriting {
   font-family: var(--font-handwriting);
+  font-weight: 500;
+  line-height: 1.05;
 }
 
 .text-mono {
   font-family: var(--font-mono);
+  font-weight: 400;
+  line-height: 1.6;
 }
