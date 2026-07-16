@@ -1,49 +1,69 @@
-const colorSwatches = [
-  ['Paper', 'paper'],
-  ['Cotton', 'cotton'],
-  ['Linen', 'linen'],
-  ['Chapter', 'chapter'],
-  ['Wine', 'wine'],
-  ['Thread', 'thread'],
-  ['Text', 'text'],
-] as const
+import { Container, PaperSection } from './shared/layout'
+import { Button, HandwrittenNote, SectionHeader } from './shared/ui'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <main className="foundation-screen">
-      <header className="foundation-header">
-        <p className="foundation-kicker">Wedding Invitation</p>
-        <h1 className="foundation-title">Foundation</h1>
-        <p className="foundation-copy">
-          This temporary screen verifies the design system, typography, color
-          palette, and project structure before building the actual wedding
-          invitation.
-        </p>
-      </header>
+    <main>
+      <PaperSection tone="paper" size="story">
+        <Container>
+          <div className={styles.demoStack}>
+            <SectionHeader
+              eyebrow="Shared foundation"
+              headingLevel={1}
+              title="Reusable layout and UI"
+              subtitle="This temporary screen checks the approved primitives before real invitation sections are built."
+              note="Handwritten notes inherit the section tone."
+            />
+            <div>
+              <Button>Primary button</Button>
+            </div>
+          </div>
+        </Container>
+      </PaperSection>
 
-      <section className="foundation-panel" aria-labelledby="fonts-title">
-        <h2 id="fonts-title">Font utilities</h2>
-        <div className="font-examples">
-          <p className="font-example text-serif">Cormorant Garamond serif</p>
-          <p className="font-example text-sans">Onest sans</p>
-          <p className="font-example text-handwriting">Caveat handwriting</p>
-          <p className="font-example text-mono">JetBrains Mono monospace</p>
-        </div>
-      </section>
+      <PaperSection tone="chapter" size="chapter">
+        <Container size="narrow">
+          <SectionHeader
+            eyebrow="Chapter tone"
+            title="Большой заголовок без финального контента"
+            subtitle="The chapter spacing fills the viewport but still grows naturally when content needs more room."
+            size="large"
+            note="Красная рукописная пометка"
+            notePosition="right"
+          />
+        </Container>
+      </PaperSection>
 
-      <section className="foundation-panel" aria-labelledby="colors-title">
-        <h2 id="colors-title">Main color tokens</h2>
-        <div className="color-swatches">
-          {colorSwatches.map(([name, token]) => (
-            <span
-              className={`color-swatch color-swatch--${token}`}
-              key={name}
-            >
-              {name}
-            </span>
-          ))}
-        </div>
-      </section>
+      <PaperSection tone="wine" size="info">
+        <Container>
+          <SectionHeader
+            eyebrow="Wine tone"
+            title="Light text stays readable"
+            subtitle="This verifies the contextual heading, body, secondary, and handwriting colors on the dark wine background."
+            note="Pale handwriting remains legible."
+            notePosition="corner"
+          />
+          <HandwrittenNote className={styles.demoNote} rotation="positive">
+            The note color comes from the section context.
+          </HandwrittenNote>
+        </Container>
+      </PaperSection>
+
+      <PaperSection tone="terminal" size="compact">
+        <Container size="narrow">
+          <SectionHeader
+            eyebrow="Terminal tone"
+            title="Terminal context"
+            subtitle="The component layer can inherit terminal text colors without introducing business logic."
+            size="small"
+          />
+          <div className={styles.terminalBlock}>
+            <p>status: layout primitives ready</p>
+            <p className={styles.terminalMuted}>next: real sections later</p>
+          </div>
+        </Container>
+      </PaperSection>
     </main>
   )
 }

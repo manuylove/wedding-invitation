@@ -1,0 +1,37 @@
+.demoStack {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.demoActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  margin-top: var(--space-8);
+}
+
+.demoNote {
+  margin-top: var(--space-8);
+}
+
+.terminalBlock {
+  max-width: 720px;
+  margin: var(--space-8) 0 0;
+  padding: var(--space-5);
+  border: 1px solid rgb(212 212 212 / 18%);
+  border-radius: var(--radius-md);
+  color: var(--section-text);
+  background: rgb(255 255 255 / 4%);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.terminalBlock p {
+  margin: 0;
+}
+
+.terminalMuted {
+  color: var(--section-text-secondary);
+}
