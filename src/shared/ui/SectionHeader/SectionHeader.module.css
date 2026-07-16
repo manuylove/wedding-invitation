@@ -1,0 +1,132 @@
+.header {
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+  color: var(--section-text, var(--color-text-primary));
+}
+
+.content {
+  min-width: 0;
+}
+
+.left {
+  text-align: left;
+  justify-items: start;
+}
+
+.center {
+  text-align: center;
+  justify-items: center;
+}
+
+.right {
+  text-align: right;
+  justify-items: end;
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-3);
+  color: var(--section-text-secondary, var(--color-text-secondary));
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  max-width: 100%;
+  color: var(--section-heading, var(--color-text-primary));
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  overflow-wrap: anywhere;
+}
+
+.large .title {
+  font-size: clamp(58px, 7vw, 88px);
+  line-height: 0.98;
+}
+
+.default .title {
+  font-size: clamp(44px, 5.5vw, 72px);
+}
+
+.small .title {
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: var(--space-5) 0 0;
+  color: var(--section-text-secondary, var(--color-text-secondary));
+  font-family: var(--font-sans);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.65;
+}
+
+.center .subtitle {
+  margin-inline: auto;
+}
+
+.right .subtitle {
+  margin-left: auto;
+}
+
+.note {
+  max-width: min(420px, 100%);
+}
+
+.noteRight {
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.42fr);
+  align-items: center;
+}
+
+.noteOverlap {
+  gap: var(--space-2);
+}
+
+.noteOverlap .note {
+  justify-self: end;
+  margin-top: calc(var(--space-4) * -1);
+}
+
+.noteCorner .note {
+  justify-self: end;
+  align-self: start;
+}
+
+.noteBelow.center .note {
+  justify-self: center;
+}
+
+.noteBelow.right .note {
+  justify-self: end;
+}
+
+@media (max-width: 720px) {
+  .header,
+  .noteRight {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    text-align: left;
+    justify-items: start;
+  }
+
+  .right .subtitle {
+    margin-left: 0;
+  }
+
+  .noteOverlap .note,
+  .noteCorner .note,
+  .noteBelow.right .note {
+    justify-self: start;
+    margin-top: 0;
+  }
+}

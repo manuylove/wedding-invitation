@@ -1,0 +1,59 @@
+.section {
+  position: relative;
+  width: 100%;
+  color: var(--section-text);
+  background: var(--section-background);
+  --section-heading: var(--color-text-primary);
+  --section-text: var(--color-text-primary);
+  --section-text-secondary: var(--color-text-secondary);
+  --section-handwriting: var(--color-thread);
+}
+
+.paper {
+  --section-background: var(--color-paper);
+}
+
+.cotton {
+  --section-background: var(--color-cotton);
+}
+
+.linen {
+  --section-background: var(--color-linen);
+}
+
+.chapterTone {
+  --section-background: var(--color-chapter);
+}
+
+.wine {
+  --section-background: var(--color-wine);
+  --section-heading: var(--color-cotton);
+  --section-text: var(--color-cotton);
+  --section-text-secondary: rgb(252 250 246 / 72%);
+  --section-handwriting: #f2c9c3;
+}
+
+.terminal {
+  --section-background: var(--color-terminal);
+  --section-heading: var(--color-terminal-text);
+  --section-text: var(--color-terminal-text);
+  --section-text-secondary: var(--color-terminal-muted);
+  --section-handwriting: var(--color-terminal-text);
+}
+
+.chapter {
+  min-height: 100svh;
+  padding-block: clamp(96px, 12vw, 180px);
+}
+
+.story {
+  padding-block: clamp(104px, 11vw, 160px);
+}
+
+.info {
+  padding-block: clamp(88px, 9vw, 128px);
+}
+
+.compact {
+  padding-block: clamp(64px, 7vw, 96px);
+}
