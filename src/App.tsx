@@ -1,7 +1,25 @@
 import { weddingContent } from './content'
+import { getInvitationFromUrl } from './invitations/lib'
 import { Container, PaperSection } from './shared/layout'
 import { SectionHeader } from './shared/ui'
 import styles from './App.module.css'
+
+const invitation = getInvitationFromUrl(window.location.search)
+
+const formatGuestNames = (names: string[]) => {
+  if (names.length <= 1) {
+    return names[0] ?? ''
+  }
+
+  const firstNames = names.slice(0, -1)
+  const lastName = names[names.length - 1]
+
+  return `${firstNames.join(', ')} и ${lastName}`
+}
+
+const invitationGreeting = invitation
+  ? `Привет, ${formatGuestNames(invitation.guests.map((guest) => guest.firstName))}`
+  : 'Приглашение не найдено. Попробуй добавить ?invite=ilya'
 
 const contentChecks = [
   {
@@ -87,6 +105,11 @@ function App() {
               subtitle={weddingContent.hero.subtitle}
               size="small"
             />
+
+            <section className={styles.invitationCheck}>
+              <p className={styles.invitationLabel}>Query param invite</p>
+              <p className={styles.invitationGreeting}>{invitationGreeting}</p>
+            </section>
 
             <dl className={styles.details}>
               {contentChecks.map((item) => (
