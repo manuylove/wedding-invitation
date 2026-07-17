@@ -7,13 +7,16 @@ export interface TimelineItem {
 
 export interface WeddingContent {
   hero: {
-    eyebrow: string
-    title: string
+    firstName: string
+    ampersand: string
+    secondName: string
     subtitle: string
     handwritten: string
     actionLabel: string
     date: string
     city: string
+    greetingFallback: string
+    imageAlt: string
   }
   personalMessage: {
     body: string
@@ -106,13 +109,16 @@ export interface WeddingContent {
 
 export const weddingContent = {
   hero: {
-    eyebrow: 'Свадебное приглашение',
-    title: 'Егор & Полина',
-    subtitle: 'Приглашают разделить с ними день, в который они станут семьёй.',
+    firstName: 'Егор',
+    ampersand: '&',
+    secondName: 'Полина',
+    subtitle: 'приглашают разделить с ними день, в который они станут семьёй',
     handwritten: 'наконец-то этот день настал',
     actionLabel: 'Открыть приглашение',
     date: '03 октября 2026',
     city: 'Томск',
+    greetingFallback: 'Привет ❤️',
+    imageAlt: 'Егор и Полина вместе',
   },
   personalMessage: {
     body: 'Очень хочется, чтобы этот день запомнился не только нам.',
