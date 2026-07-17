@@ -3,6 +3,7 @@ import type { Invitation } from '../model'
 export const invitations = [
   {
     slug: 'larisa-viktorovna',
+    greeting: 'Дорогая Лариса Викторовна ❤️',
     guests: [
       {
         id: 'larisa-viktorovna',
@@ -13,6 +14,7 @@ export const invitations = [
   },
   {
     slug: 'meshechko-family',
+    greeting: 'Привет, родная стая ❤️',
     guests: [
       {
         id: 'masha',
@@ -28,6 +30,7 @@ export const invitations = [
   },
   {
     slug: 'fam-family',
+    greeting: 'Дорогие родные ❤️',
     guests: [
       {
         id: 'nadezhda',
@@ -48,6 +51,7 @@ export const invitations = [
   },
   {
     slug: 'ilya',
+    greeting: 'Здарова, заебал ❤️',
     guests: [
       {
         id: 'ilya',
@@ -58,6 +62,7 @@ export const invitations = [
   },
   {
     slug: 'zina',
+    greeting: 'Здарова, Зина ❤️',
     guests: [
       {
         id: 'zina',
@@ -68,6 +73,7 @@ export const invitations = [
   },
   {
     slug: 'kirill',
+    greeting: 'Привет, Кирилл ❤️',
     guests: [
       {
         id: 'kirill',
@@ -78,6 +84,7 @@ export const invitations = [
   },
   {
     slug: 'olya-and-alisa',
+    greeting: 'Привет, Оля и Алиса ❤️',
     guests: [
       {
         id: 'olya',
@@ -93,6 +100,7 @@ export const invitations = [
   },
   {
     slug: 'ksenia',
+    greeting: 'Привет, Ксюша ❤️',
     guests: [
       {
         id: 'ksenia',
@@ -103,6 +111,7 @@ export const invitations = [
   },
   {
     slug: 'karepov-family',
+    greeting: 'Дорогие Александр и Ирина ❤️',
     guests: [
       {
         id: 'alexander',

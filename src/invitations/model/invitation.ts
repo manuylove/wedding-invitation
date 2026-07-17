@@ -6,5 +6,6 @@ export type Guest = {
 
 export type Invitation = {
   slug: string
+  greeting: string
   guests: Guest[]
 }
