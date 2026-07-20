@@ -1,0 +1,45 @@
+.section {
+  overflow-x: clip;
+}
+
+.layout {
+  max-width: 980px;
+  display: grid;
+  gap: var(--space-16);
+  padding-block: var(--space-8);
+}
+
+.body {
+  max-width: 850px;
+  margin: 0;
+  color: var(--section-heading);
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  max-width: min(560px, 100%);
+  justify-self: end;
+  color: var(--section-handwriting);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    gap: var(--space-10);
+    padding-block: 0;
+  }
+
+  .body {
+    font-size: clamp(38px, 12vw, 58px);
+    line-height: 1.05;
+  }
+
+  .note {
+    justify-self: start;
+    max-width: min(100%, 520px);
+  }
+}
