@@ -1,3 +1,3 @@
 export { Hero } from './Hero'
 export { PersonalMessage } from './PersonalMessage'
-export { Transition } from './Transition'
+export { TenYears } from './TenYears'

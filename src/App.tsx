@@ -1,6 +1,6 @@
 import { weddingContent } from './content'
 import { getInvitationFromUrl } from './invitations/lib'
-import { Hero, PersonalMessage, Transition } from './sections'
+import { Hero, PersonalMessage, TenYears } from './sections'
 
 const PERSONAL_MESSAGE_SECTION_ID = 'personal-message'
 const invitation = getInvitationFromUrl(window.location.search)
@@ -17,7 +17,7 @@ function App() {
         content={weddingContent.personalMessage}
         id={PERSONAL_MESSAGE_SECTION_ID}
       />
-      <Transition content={weddingContent.transition} />
+      <TenYears content={weddingContent.tenYears} />
     </main>
   )
 }
