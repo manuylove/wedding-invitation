@@ -1,9 +1,8 @@
 import { weddingContent } from './content'
 import { getInvitationFromUrl } from './invitations/lib'
-import { Hero } from './sections'
-import styles from './App.module.css'
+import { Hero, PersonalMessage, Transition } from './sections'
 
-const NEXT_SECTION_ID = 'invitation-content'
+const PERSONAL_MESSAGE_SECTION_ID = 'personal-message'
 const invitation = getInvitationFromUrl(window.location.search)
 
 function App() {
@@ -12,13 +11,13 @@ function App() {
       <Hero
         content={weddingContent.hero}
         invitation={invitation}
-        nextSectionId={NEXT_SECTION_ID}
+        nextSectionId={PERSONAL_MESSAGE_SECTION_ID}
       />
-      <div
-        aria-hidden="true"
-        className={styles.nextSectionAnchor}
-        id={NEXT_SECTION_ID}
+      <PersonalMessage
+        content={weddingContent.personalMessage}
+        id={PERSONAL_MESSAGE_SECTION_ID}
       />
+      <Transition content={weddingContent.transition} />
     </main>
   )
 }
