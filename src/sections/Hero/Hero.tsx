@@ -42,7 +42,14 @@ export function Hero({ content, invitation, nextSectionId }: HeroProps) {
             <p className={styles.subtitle}>{content.subtitle}</p>
             <dl className={styles.meta}>
               <div>
-                <dt>{content.date}</dt>
+                <dt
+                  className={styles.date}
+                  aria-label={`${content.date.day} ${content.date.month} ${content.date.year}`}
+                >
+                  <span className={styles.dateNumber}>{content.date.day}</span>
+                  <span>{content.date.month}</span>
+                  <span className={styles.dateNumber}>{content.date.year}</span>
+                </dt>
                 <dd>{content.city}</dd>
               </div>
             </dl>

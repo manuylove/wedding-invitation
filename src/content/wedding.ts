@@ -13,7 +13,11 @@ export interface WeddingContent {
     subtitle: string
     handwritten: string
     actionLabel: string
-    date: string
+    date: {
+      day: string
+      month: string
+      year: string
+    }
     city: string
     greetingFallback: string
     imageAlt: string
@@ -22,11 +26,10 @@ export interface WeddingContent {
     body: string
     handwritten: string
   }
-  transition: {
-    text: string
-  }
   tenYears: {
-    title: string
+    intro: string
+    years: string
+    caption: string
     handwritten: string
   }
   timeline: {
@@ -115,7 +118,11 @@ export const weddingContent = {
     subtitle: 'приглашают разделить с ними день, в который они станут семьёй',
     handwritten: 'наконец-то этот день настал',
     actionLabel: 'Открыть приглашение',
-    date: '03 октября 2026',
+    date: {
+      day: '03',
+      month: 'октября',
+      year: '2026',
+    },
     city: 'Томск',
     greetingFallback: 'Привет ❤️',
     imageAlt: 'Егор и Полина вместе',
@@ -124,11 +131,10 @@ export const weddingContent = {
     body: 'Очень хочется, чтобы этот день запомнился не только нам.',
     handwritten: 'Мы собираем рядом только самых близких. Будем счастливы провести этот день вместе.',
   },
-  transition: {
-    text: 'Иногда одна встреча меняет всю жизнь.',
-  },
   tenYears: {
-    title: '10 лет вместе',
+    intro: 'Иногда одна встреча меняет всю жизнь.',
+    years: '10',
+    caption: 'лет вместе',
     handwritten: 'и это только начало',
   },
   timeline: {
