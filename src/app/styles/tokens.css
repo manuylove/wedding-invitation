@@ -13,11 +13,11 @@
   --color-terminal-muted: #858585;
   --color-border: rgb(41 39 37 / 14%);
 
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Onest", sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Onest", Arial, sans-serif;
   --font-handwriting: "Caveat", cursive;
-  --font-mono: "JetBrains Mono", monospace;
-  --font-numeric: "Prata", serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-numeric: "Prata", Georgia, "Times New Roman", serif;
 
   --container-large: 1440px;
   --container-default: 1200px;
