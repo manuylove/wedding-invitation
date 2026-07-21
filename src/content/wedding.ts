@@ -40,13 +40,12 @@ export interface WeddingContent {
     title: string
     name: string
     address: string
-    travelTime: string
     description: {
       intro: string
-      details: string
     }
     handwritten: string
     mapLabel: string
+    mapUrl: string
   }
   transfer: {
     title: string
@@ -170,17 +169,15 @@ export const weddingContent = {
     ],
   },
   venue: {
-    title: 'Утёс',
-    name: 'Загородный комплекс «Утёс»',
+    title: 'Площадка',
+    name: 'Утёс',
     address: 'Томский район, посёлок Синий Утёс, 61',
-    travelTime: '15 минут от Томска',
     description: {
       intro: 'Загородная площадка среди сосен, тишины и осеннего воздуха.',
-      details:
-          'Мы выбрали место, где можно провести весь день вместе, не отвлекаясь на город и суету.',
     },
     handwritten: 'именно здесь мы скажем друг другу «да»',
     mapLabel: 'Открыть в 2ГИС',
+    mapUrl: 'https://go.2gis.com/yMmTL',
   },
   transfer: {
     title: 'О дороге мы уже позаботились',
