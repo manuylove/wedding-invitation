@@ -53,9 +53,6 @@ export function Hero({ content, invitation, nextSectionId }: HeroProps) {
                 <dd>{content.city}</dd>
               </div>
             </dl>
-            <Button className={styles.button} onClick={handleOpenInvitation}>
-              {content.actionLabel}
-            </Button>
           </div>
 
           <figure className={styles.media}>
@@ -77,6 +74,10 @@ export function Hero({ content, invitation, nextSectionId }: HeroProps) {
               {content.handwritten}
             </HandwrittenNote>
           </figure>
+
+          <Button className={styles.button} onClick={handleOpenInvitation}>
+            {content.actionLabel}
+          </Button>
         </div>
       </Container>
     </section>
