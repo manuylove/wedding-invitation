@@ -35,8 +35,10 @@ export function TenYears({ content }: TenYearsProps) {
                   className={styles.photo}
                   src={tenYearsCouple}
                   alt="Егор и Полина на совместной фотографии"
+                  decoding="async"
                   width="820"
                   height="1024"
+                  loading="lazy"
                 />
               </div>
               <figcaption className={styles.caption}>

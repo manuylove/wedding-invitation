@@ -65,7 +65,10 @@ export function Hero({ content, invitation, nextSectionId }: HeroProps) {
               <img
                 alt={content.imageAlt}
                 className={styles.image}
+                decoding="async"
+                fetchPriority="high"
                 height="980"
+                loading="eager"
                 src={heroCouple}
                 width="820"
               />
