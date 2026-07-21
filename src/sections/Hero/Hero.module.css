@@ -20,15 +20,19 @@
   width: 100%;
   display: grid;
   grid-template-columns: minmax(0, 0.45fr) minmax(320px, 0.55fr);
-  grid-template-rows: minmax(0, auto) auto;
-  gap: clamp(40px, 6vw, 96px);
+  grid-template-rows: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "content media"
+    "button media";
+  min-height: 100svh;
+  column-gap: clamp(40px, 6vw, 96px);
+  row-gap: var(--space-4);
   align-items: stretch;
-  align-content: center;
+  align-content: stretch;
 }
 
 .content {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: content;
   min-width: 0;
   display: grid;
   justify-items: start;
@@ -122,22 +126,20 @@
 }
 
 .button {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: button;
   justify-self: start;
   align-self: start;
-  margin-top: var(--space-4);
   margin-bottom: var(--space-16);
 }
 
 .media {
   position: relative;
-  grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-area: media;
   min-width: 0;
   width: 100%;
   align-self: stretch;
-  height: 100%;
+  min-height: 0;
+  height: auto;
   margin: 0;
   background: var(--color-linen);
 }
@@ -173,27 +175,28 @@
 
   .layout {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-areas:
+      "content"
+      "media"
+      "button";
+    min-height: 0;
     gap: var(--space-10);
     align-items: start;
   }
 
   .content {
-    grid-column: 1;
-    grid-row: 1;
+    grid-area: content;
     max-width: 680px;
     padding-block: var(--space-16) 0;
   }
 
   .media {
-    grid-column: 1;
-    grid-row: 2;
+    grid-area: media;
     height: auto;
   }
 
   .button {
-    grid-column: 1;
-    grid-row: 3;
+    grid-area: button;
     margin-top: 0;
     margin-bottom: var(--space-12);
   }
