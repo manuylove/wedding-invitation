@@ -36,7 +36,7 @@
   min-width: 0;
   display: grid;
   justify-items: start;
-  align-content: end;
+  align-content: center;
   gap: var(--space-5);
   padding-block: var(--space-20) 0;
 }
