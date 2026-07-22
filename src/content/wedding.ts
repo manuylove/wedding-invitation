@@ -46,6 +46,8 @@ export interface WeddingContent {
     handwritten: string
     mapLabel: string
     mapUrl: string
+    instagramLabel: string
+    instagramUrl: string
   }
   transfer: {
     title: string
@@ -178,6 +180,8 @@ export const weddingContent = {
     handwritten: 'именно здесь мы скажем друг другу «да»',
     mapLabel: 'Открыть в 2ГИС',
     mapUrl: 'https://go.2gis.com/yMmTL',
+    instagramLabel: '@utes.tomsk',
+    instagramUrl: 'https://www.instagram.com/utes.tomsk',
   },
   transfer: {
     title: 'О дороге мы уже позаботились',

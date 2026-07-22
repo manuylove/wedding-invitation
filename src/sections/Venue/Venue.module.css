@@ -81,7 +81,7 @@
   display: flex;
   align-items: flex-start;
   gap: var(--space-2);
-  margin-top: var(--space-8);
+  margin-top: var(--space-2);
   color: var(--color-text-secondary);
   font-family: var(--font-sans);
   font-size: clamp(15px, 1.1vw, 17px);
@@ -130,11 +130,40 @@
   color: var(--color-thread);
 }
 
-.mapLink {
-  margin-top: var(--space-4);
+.instagramLink {
+  width: fit-content;
+  max-width: 100%;
+  margin-top: var(--space-6);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: clamp(15px, 1.1vw, 17px);
+  font-weight: 500;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.instagramLink:hover,
+.instagramLink:visited {
+  color: var(--color-text-secondary);
+}
+
+.instagramLink:focus-visible {
+  outline: 2px solid var(--color-thread);
+  outline-offset: 4px;
+}
+
+.instagramIcon {
+  flex: none;
+  width: 24px;
+  height: 24px;
 }
 
 .mapLink {
+  margin-top: var(--space-4);
   min-height: 54px;
   padding: 0 28px;
   display: inline-flex;
@@ -151,6 +180,7 @@
   text-decoration: none;
   transition:
     background var(--transition-fast),
+    opacity var(--transition-fast),
     transform var(--transition-fast);
 }
 
@@ -226,6 +256,13 @@
     text-shadow: 0 1px 18px rgb(41 39 37 / 34%);
   }
 
+  .instagramLink,
+  .instagramLink:hover,
+  .instagramLink:visited {
+    color: rgb(252 250 246 / 84%);
+    text-shadow: 0 1px 18px rgb(41 39 37 / 34%);
+  }
+
   .title {
     max-width: 10ch;
     font-size: clamp(40px, 11vw, 56px);
@@ -242,7 +279,6 @@
   }
 
   .mapLink {
-    margin-top: var(--space-4);
     color: var(--color-text-primary);
     background: var(--color-cotton);
   }
@@ -257,6 +293,7 @@
   .mapLink:focus-visible {
     color: var(--color-text-primary);
   }
+
 }
 
 @media (max-width: 420px) {
